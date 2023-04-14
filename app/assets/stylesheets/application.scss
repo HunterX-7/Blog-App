@@ -14,3 +14,19 @@
  *= require_self
  */
 @import 'bootstrap';
+
+* {
+    color: black;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+.btn-custom {
+    color: white;
+}
+
+ul {
+    list-style-type: none;
+  }
