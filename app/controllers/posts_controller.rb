@@ -22,7 +22,7 @@ class PostsController < ApplicationController
     respond_to do |f|
       if @post.save
         f.html { redirect_to user_posts_path }
-      else 
+      else
         f.html { render :new }
       end
     end
