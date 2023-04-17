@@ -9,10 +9,10 @@ RSpec.describe 'Posts', type: :request do
       posts_counter: 0
     )
     @first_post = Post.create(
-      title: 'first Post', 
-      text: 'first Post text', 
-      comments_counter: 0, 
-      likes_counter: 0, 
+      title: 'first Post',
+      text: 'first Post text',
+      comments_counter: 0,
+      likes_counter: 0,
       author: @first_user
     )
   end
