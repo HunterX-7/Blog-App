@@ -19,5 +19,11 @@ RSpec.describe 'users/index.html.erb', type: :feature do
   it 'shows the user info as it loads the page' do
     visit users_path
     expect(page).to have_content(@first_user.name)
+
+    expect(page).to have_content(@second_user.name)
   end
+
+  it 'shows the user profile picture as it loads the page' do
+    visit users_path
+    expect(page).to have_css('img = @first_user.photo')
 end
