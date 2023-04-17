@@ -108,6 +108,12 @@ To run the project, execute the following command in the project directory:
 rails server
 ```
 
+To run test, execute the following command in the project directory:
+
+```console
+rspec spec
+```
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
