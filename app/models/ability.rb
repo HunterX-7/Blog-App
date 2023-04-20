@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class Ability
   include CanCan::Ability
 
@@ -8,14 +6,14 @@ class Ability
     #
     user ||= User.new
 
-    unless user.admin?
+    if user.admin?
+      can :manage, :all
+    else
       can :read, :all
       can :create, Post, :all
       can :destroy, Post, author_id: user.id
       can :create, Comment, :all
       can :destroy, Comment, author_id: user.id
-    else
-      can :manage, :all
     end
 
     # The first argument to `can` is the action you are giving the user
